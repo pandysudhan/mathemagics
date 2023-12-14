@@ -108,7 +108,7 @@ class DrawableCanvas extends Component {
   };
 
   sendImageToAPI = (imageData) => {
-    const apiUrl = "http://127.0.0.1:5000/"; // Replace with your API endpoint
+    const apiUrl = "http://139.177.103.242:5000/"; // Replace with your API endpoint
     const formData = new FormData();
     formData.append("image_file", this.dataURLtoBlob(imageData), "drawing.png");
 
