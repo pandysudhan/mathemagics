@@ -1,4 +1,4 @@
 # mathemagics_frontend
 
 DEMO:
-![](https://github.com/pandysudhan/mathemagics/main/demo.gif)
+![](https://github.com/pandysudhan/mathemagics/blob/main/demo.gif)
