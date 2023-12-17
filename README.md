@@ -4,7 +4,7 @@ A simple Convolutional Neural Network trained on MNIST digits dataset to classif
 
 The web app is made with react + vite: 
 
-Backend: [@pandysudhan/mathemagics_Backend](https://github.com/pandysudhan/mathemagics_backend)
+Backend: [@pandysudhan/mathemagics_backend](https://github.com/pandysudhan/mathemagics_backend)
 
 DEMO:
 
