@@ -6,10 +6,10 @@ FROM python:3.9
 
 WORKDIR /code
 
-COPY ./client/requirements.txt /code/requirements.txt
+COPY ./server/requirements.txt /code/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
-COPY ./client .
+COPY ./server .
 
 CMD ["gunicorn", "-b" ,"0.0.0.0:7860", "mathemagics:app"]
