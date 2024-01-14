@@ -1,0 +1,5 @@
+#ignore server modules
+server/venv
+
+# ignore client node modules
+client/node_modules
