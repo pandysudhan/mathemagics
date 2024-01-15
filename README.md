@@ -8,7 +8,7 @@ Web app for hands written digits recognition
   - Web Framework: Flask
   - Hosting: Huggingface spaces with docker
 
-- Frontend (cleint):
+- Frontend (client):
   - Framework: React
   - Hosting: Github pages
 
