@@ -12,7 +12,8 @@ Web app for hands written digits recognition
   - Framework: React
   - Hosting: Github pages
 
-Demo: 
+
+- Demo: 
 ![demo](https://github.com/pandysudhan/mathemagics/assets/83126616/3ecb2d2a-e04e-4d1b-a08b-d1d7e1cb5c7f)
 
 
