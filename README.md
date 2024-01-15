@@ -6,7 +6,7 @@ Web app for hands written digits recognition
   - Model: Convolutional Neural Network (CNN)
   - Training dataset: MNIST Dataset
   - Web Framework: Flask
-  - Hosting: Huggingface spaces
+  - Hosting: Huggingface spaces with docker
 
 - Frontend (cleint):
   - Framework: React
