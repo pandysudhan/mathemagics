@@ -12,4 +12,4 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY ./server .
 
-CMD ["gunicorn", "-b" ,"0.0.0.0", "mathemagics:app"]
+CMD ["gunicorn", "-b" ,"0.0.0.0:8080", "mathemagics:app"]
