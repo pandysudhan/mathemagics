@@ -125,7 +125,7 @@ class DrawableCanvas extends Component {
   };
 
   sendImageToAPI = (imageData) => {
-    const apiUrl = "https://server.pandysudhan.com.np:8080"; // Replace with your API endpoint
+    const apiUrl = "https://server.pandysudhan.com.np"; // Replace with your API endpoint
     const formData = new FormData();
     formData.append("image_file", this.dataURLtoBlob(imageData), "drawing.png");
 
