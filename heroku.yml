@@ -2,4 +2,4 @@ build:
   docker:
     web: server/Dockerfile
 run:
-  web: gunicorn -b 0.0.0.0:8080 mathemagics:app
+  web: gunicorn -b 0.0.0.0:$PORT mathemagics:app
