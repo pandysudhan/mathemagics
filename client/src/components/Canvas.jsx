@@ -56,23 +56,23 @@ class DrawableCanvas extends Component {
     this.ctx.lineCap = "round";
     this.ctx.strokeStyle = "white";
 
-
     this.questionGenerator();
 
     // Add touch event listeners
     canvas.addEventListener("touchstart", (e) => this.startPosition(e));
     canvas.addEventListener("touchend", () => this.endPosition());
     canvas.addEventListener("touchmove", (e) => this.draw(e));
-
   }
 
   startPosition(e) {
     e.preventDefault();
-  
+
     const { clientX, clientY } = e.touches ? e.touches[0] : e;
-    const offsetX = clientX - this.canvasRef.current.getBoundingClientRect().left;
-    const offsetY = clientY - this.canvasRef.current.getBoundingClientRect().top;
-  
+    const offsetX =
+      clientX - this.canvasRef.current.getBoundingClientRect().left;
+    const offsetY =
+      clientY - this.canvasRef.current.getBoundingClientRect().top;
+
     this.setState({ drawing: true });
     this.draw({ nativeEvent: { offsetX, offsetY } });
   }
@@ -84,17 +84,18 @@ class DrawableCanvas extends Component {
 
   draw(e) {
     if (!this.state.drawing) return;
-  
+
     const { clientX, clientY } = e.touches ? e.touches[0] : e;
-    const offsetX = clientX - this.canvasRef.current.getBoundingClientRect().left;
-    const offsetY = clientY - this.canvasRef.current.getBoundingClientRect().top;
-  
+    const offsetX =
+      clientX - this.canvasRef.current.getBoundingClientRect().left;
+    const offsetY =
+      clientY - this.canvasRef.current.getBoundingClientRect().top;
+
     this.ctx.lineTo(offsetX, offsetY);
     this.ctx.stroke();
     this.ctx.beginPath();
     this.ctx.moveTo(offsetX, offsetY);
   }
-  
 
   resetCanvas = () => {
     const canvas = this.canvasRef.current;
@@ -125,7 +126,7 @@ class DrawableCanvas extends Component {
   };
 
   sendImageToAPI = (imageData) => {
-    const apiUrl = "https://server.pandysudhan.com.np"; // Replace with your API endpoint
+    const apiUrl = "https://mathemagics-backend-b8c1dceb57b8.herokuapp.com/"; // Replace with your API endpoint
     const formData = new FormData();
     formData.append("image_file", this.dataURLtoBlob(imageData), "drawing.png");
 
@@ -179,10 +180,10 @@ class DrawableCanvas extends Component {
         <div className="flex flex-row justify-center mb-20">
           <div className="font-bold text-2xl mr-7">Your Score:</div>
           <div className="font-bold text-2xl"> {this.state.score}</div>
-
         </div>
-        <div className="font-bold text-2xl mr-7 mb-5">(Please draw in the area)</div>
-
+        <div className="font-bold text-2xl mr-7 mb-5">
+          (Please draw in the area)
+        </div>
         <div className="flex flex-row items-center">
           <div className="flex flex-row justify-center my-10">
             <div className=" font-bold mx-3 text-2xl ">
@@ -226,6 +227,5 @@ class DrawableCanvas extends Component {
     );
   }
 }
-
 
 export default DrawableCanvas;
